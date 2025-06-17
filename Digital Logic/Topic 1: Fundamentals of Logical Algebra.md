@@ -15,14 +15,12 @@ $ 45/2 = 22 \quad \text{remainder} = 1 \\
 11/2 = 5 \quad \text{remainder} = 1 \\
 5/2 = 2 \quad \text{remainder} = 1 \\
 2/2 = 1 \quad \text{remainder} = 0 \\
-1/2 = 0 \quad \text{remainder} = 1 \\ $
-$45_{10} = 101101_{2}$
+1/2 = 0 \quad \text{remainder} = 1 \\ 45_{10} = 101101_{2}$
 
 $ 0.3125 \times 2 = 0.625 \quad \text{(0)} \\
 0.625 \times 2 = 1.25 \quad \text{(1)} \\
 0.25 \times 2 = 0.5 \quad \text{(0)} \\
-0.5 \times 2 = 1.0 \quad \text{(1)} \\ $
-$0.45_{10} = 0.0110_{2}$
+0.5 \times 2 = 1.0 \quad \text{(1)} \\ 0.45_{10} = 0.0110_{2}$
 
 ## 2 to 16
 $ 1100 1010 0101 0111 = CA57_{16} $
