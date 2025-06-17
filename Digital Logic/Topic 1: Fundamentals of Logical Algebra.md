@@ -11,12 +11,12 @@ $$ 1.1 = 1 \times 2^0 + 1 \times 2^1 = 3_{10} $$
 
 ## 10 to 2
 $$
-45/2 = 22 \quad \text{remainder} = 1 \\
-22/2 = 11 \quad \text{remainder} = 0 \\
-11/2 = 5 \quad \text{remainder} = 1 \\
-5/2 = 2 \quad \text{remainder} = 1 \\
-2/2 = 1 \quad \text{remainder} = 0 \\
-1/2 = 0 \quad \text{remainder} = 1 \\
+45/2 = 22 \quad \text{remainder} = 1 \\\\
+22/2 = 11 \quad \text{remainder} = 0 \\\\
+11/2 = 5 \quad \text{remainder} = 1 \\\\
+5/2 = 2 \quad \text{remainder} = 1 \\\\
+2/2 = 1 \quad \text{remainder} = 0 \\\\
+1/2 = 0 \quad \text{remainder} = 1 \\\\
 45_{10} = 101101_{2}
 $$
 
@@ -37,5 +37,3 @@ $$
 $$ 10A4_{16} = 0001 0000 1010 0100_{2} $$
 
 ## 8 to 2
-
-$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
