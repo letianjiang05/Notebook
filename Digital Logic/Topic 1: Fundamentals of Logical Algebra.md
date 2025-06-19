@@ -11,6 +11,7 @@ $$ 1.1 = 1 \times 2^0 + 1 \times 2^1 = 3_{10} $$
 
 ## 10 to 2
 $$
+\displaylines{
 45/2 = 22 \quad \text{remainder} = 1 \newline
 22/2 = 11 \quad \text{remainder} = 0 \newline
 11/2 = 5 \quad \text{remainder} = 1 \newline
@@ -18,6 +19,7 @@ $$
 2/2 = 1 \quad \text{remainder} = 0 \newline
 1/2 = 0 \quad \text{remainder} = 1 \newline
 45_{10} = 101101_{2}
+}
 $$
 
 $$
