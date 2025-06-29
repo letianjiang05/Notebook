@@ -1,0 +1,2 @@
+- b：Last note, raise by a semitone
+- #：Second to last note, lower by a semitone
