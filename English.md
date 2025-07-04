@@ -1,0 +1,5 @@
+- [100 Books to Read in a Lifetime: Readers' Picks](https://www.goodreads.com/list/show/69635.100_Books_to_Read_in_a_Lifetime_Readers_Picks)
+- [100 Best Books of All Time: The World Library List](https://www.goodreads.com/list/show/9440.100_Best_Books_of_All_Time_The_World_Library_List)
+- [100 Leadership Success Books to Read in a Lifetime: Readers' Picks](https://www.goodreads.com/list/show/97132.100_Leadership_Success_Books_to_Read_in_a_Lifetime_Readers_Picks)
+- [【终极英文书单】闲书原著推荐——从入门到进阶](https://www.bilibili.com/opus/437744660241310223)
+- [【英语终极原则】英文闲书、语法知识、考试规划相关问题汇总和答复](https://www.bilibili.com/opus/430416544093093668)

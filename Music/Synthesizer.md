@@ -32,3 +32,15 @@ graph TD;
     C --> D[Filter];
     D --> E[Amplifier];
 ```
+
+- Amplitude: Louder, softer
+- Pitch: Highness, lowness
+- Theremin: played with two controls: pitch and amplitude.
+brightness,” “movement,”
+
+- Envelope: The shape of a sound changing over time.
+- ADSR
+    - Attack
+    - Decay
+    - Sustain
+    - Release
