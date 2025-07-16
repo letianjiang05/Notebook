@@ -1,0 +1,12 @@
+- $ y(t) = A \sin(\omega t + \phi) $
+- $ v(t) = A \omega \cos(\omega t + \phi) $
+- $ a(t) = -A \omega^2 \sin(\omega t + \phi) $
+- $ y(t) = A \cos(\omega t + \phi) $
+- $ v(t) = -A \omega \sin(\omega t + \phi) $
+- $ a(t) = -A \omega^2 \cos(\omega t + \phi) $
+- $ w = \frac{v_{max}}{y_{max}} = \frac{A \omega}{A} = \omega $
+
+- Special Cases:
+    - Object on a spring: $ w = \sqrt{\frac{k}{m}} $
+    - Simple Pendulum: $ w = \sqrt{\frac{g}{L}} $
+    - Physical Pendulum: $ w = \sqrt{\frac{mgd_{CM}}{I}} $

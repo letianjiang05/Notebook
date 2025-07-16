@@ -1,0 +1,6 @@
+- MAE
+    - Mean Absolute Error
+    - $ L(w) = \frac{1}{n} \sum_{i=1}^{n} |y_i - y(x_i, w)| $
+- MSE
+    - Mean Squared Error
+    - $ L(w) = \frac{1}{n} \sum_{i=1}^{n} (y_i - y(x_i, w))^2 $

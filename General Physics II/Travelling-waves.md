@@ -1,0 +1,27 @@
+- The one-dimensional wave equation: $ \frac{\partial^2 y}{\partial x^2} = \frac{1}{v^2} \frac{\partial^2 y}{\partial t^2} $
+- Harmonic Waves: 
+- Mechanical Waves
+    - $ S(x, t) = A \sin(kx - \omega t + \phi) $
+- Transverse Waves
+
+    - $ y(x, t) = \frac {1}{(x - vt)^2+1} $
+    - $ y(x, t) = A \sin(kx - \omega t + \phi) $
+        - $ k (rad/m) = \frac{2\pi}{\lambda} $: Wave number
+        - $ \omega (rad/s) = \frac{2\pi}{T} = 2\pi f$: Angular frequency
+        - $ v (m/s) = \lambda f = \frac{\omega}{k} $: Wave speed
+        - $ \phi (rad) $: Phase constant
+        - $ \lambda (m) = \frac{v}{f} $: Wavelength
+    - $ v = \frac{\partial y}{\partial t} $
+        - $ v = n \hat{j} m/s$
+    - $ a = \frac{\partial^2 y}{\partial t^2} $
+        - $ a = n \hat{j} m/s^2$
+- Transverse waves on a rope
+    - Speed: $ v = \sqrt{\frac{F_T}{\mu}} $
+        - $ F_T $: Tension in the rope
+        - $ \mu (kg/m) $: Linear mass density of the rope
+- Energy
+    - $ E = \frac{1}{2} (\frac{\Delta m}{\Delta x}\lambda)^2 y_{max}^2 w^2$
+- Power
+    - $ P = \frac{E}{t} = \frac{1}{2} (\frac{\Delta m}{\Delta x}\lambda)^2 y_{max}^2 w^2 f $
+- Peak: 
+- Mach Number: $ M = \frac{v}{v_s} $

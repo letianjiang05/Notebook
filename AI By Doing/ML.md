@@ -1,0 +1,27 @@
+- AI
+    - ML: Find a way to implement AI
+        - DL
+- ML
+    - Supervised Learning: Predictive Modeling (with labeled data)
+        - Classification
+            - Support Vector Machines
+            - Discriminant Analysis
+            - Naive Bayes
+            - Nearest Neighbor
+            - Neural Networks
+        - Rregression
+            - Linear Regression, GLM
+            - SVR, GPR
+            - Ensemble Methods
+            - Decision Trees
+            - Neural Networks
+    - Unsupervised Learning: Discovering Patterns (with unlabeled data)
+        - Clustering
+            - K-Means, K-Medoids
+            - Fuzzy C-Means
+            - Hierarchical
+            - Gaussian Mixture
+            - Hidden Markov Model
+            - Neural Networks
+    - Reinforcement Learning
+    - Semi-supervised Learning
