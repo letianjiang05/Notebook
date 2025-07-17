@@ -1,13 +1,16 @@
-- 1. Select Model
+1. Select Model
     - Sequential
     - Model
-- 2. Build Network Layers
+2. Build Network Layers
     - Input Layer: Input data to
     - Hidden Layers
     - Output Layer
-- 3. Compile Model
+3. Compile Model
     - Optimizer
     - Loss Function
     - Metrics
-- 4. Train Model
-    -
+4. Train Model
+    - Training Data
+    - Validation Data
+    - Epochs
+    - Batch Size
