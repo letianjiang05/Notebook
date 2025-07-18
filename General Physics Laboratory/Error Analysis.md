@@ -36,39 +36,39 @@
 * May not affect the overall accuracy.
 * Error is the discrepancy of a measured value from the true value.
 * Uncertainty is the range of the possible errors for a measured value.
-* Result of a measurement: $ x = x\_0 \pm \Delta x $
-  * $ x\_0 $: the measured value
-  * $ \Delta x $: the uncertainty
+* Result of a measurement: $$ x = x\_0 \pm \Delta x $$
+  * $$ x\_0 $$: the measured value
+  * $$ \Delta x $$: the uncertainty
 * Measurement
-  * Single measurement: $ x = x\_0 \pm \Delta x\_{sys} $
-    * $ \Delta x\_{sys} $: Minimum scale of the instrument
-  * Multiple measurements: $ x = x\_{measured} \pm \Delta x $
-    * $ x\_{measured} $: Mean of the measurements
-    * $ \Delta x = \sqrt{(\Delta x\_{sys})^2 + (standard\ error)^2}$: Combined uncertainty
-  * Sample Mean: $ \bar{x} = \frac{1}{n} \sum\_{i=1}^{n} x\_i $
-  * Standard Deviation: $ s = \sqrt{\frac{1}{n-1} \sum\_{i=1}^{n} (x\_i - \bar{x})^2} $
-  * Standard Error: $ SE = \frac{s}{\sqrt{n\}} $
-  * Combined Uncertainty: $ \Delta x = \sqrt{(\Delta x\_{sys})^2 + (SE)^2} $
+  * Single measurement: $$ x = x\_0 \pm \Delta x\_{sys} $$
+    * $$ \Delta x\_{sys} $$: Minimum scale of the instrument
+  * Multiple measurements: $$ x = x\_{measured} \pm \Delta x $$
+    * $$ x\_{measured} $$: Mean of the measurements
+    * $$ \Delta x = \sqrt{(\Delta x\_{sys})^2 + (standard\ error)^2}$$: Combined uncertainty
+  * Sample Mean: $$ \bar{x} = \frac{1}{n} \sum\_{i=1}^{n} x\_i $$
+  * Standard Deviation: $$ s = \sqrt{\frac{1}{n-1} \sum\_{i=1}^{n} (x\_i - \bar{x})^2} $$
+  * Standard Error: $$ SE = \frac{s}{\sqrt{n\}} $$
+  * Combined Uncertainty: $$ \Delta x = \sqrt{(\Delta x\_{sys})^2 + (SE)^2} $$
 
 #### Rules for Stating Uncertainty
 
 * Uncertainty can be expressed in one significant figure.
-* $ 0.32 \rightarrow 0.4 $
-* $ 72.6 \pm 0.4 $
+* $$ 0.32 \rightarrow 0.4 $$
+* $$ 72.6 \pm 0.4 $$
 * Accuracy: Closeness to the true value.
 * Precision: Groupness of repeated measurements.
 
 ### Percentage of Error
 
-* $ \text{Percentage Error}(%) = \frac{|x\_{measured} - x\_{true}|}{|x\_{true}|} \times 100% $
+* $$ \text{Percentage Error}(%) = \frac{|x\_{measured} - x\_{true}|}{|x\_{true}|} \times 100% $$
 
 ### Relative Uncertainty
 
-* $ \text{Relative Uncertainty} = \frac{\Delta x}{x\_{measured\}} \times 100% $
+* $$ \text{Relative Uncertainty} = \frac{\Delta x}{x\_{measured\}} \times 100% $$
 
 ### Percentage Difference
 
-* $ \text{Percentage of Difference}(%) = | \frac{E\_{1} - E\_{2\}}{\frac{E\_{1} + E\_{2\}}{2\}} | \times 100% $
+* $$ \text{Percentage of Difference}(%) = | \frac{E\_{1} - E\_{2\}}{\frac{E\_{1} + E\_{2\}}{2\}} | \times 100% $$
 
 ### Propagation of Error
 
