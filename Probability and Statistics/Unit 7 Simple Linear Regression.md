@@ -1,14 +1,14 @@
 # 12.1 The Simple Linear Regression Model
 - **Regression**: investigates the relationship between variables related in a nondeterministic fashion.
 - **Linear Regression**:
-- $$Y = \beta_0 + \beta_1 X$$
-    - $$X$$: Independent/Predictor/Explanatory variable
-    - $$Y$$: Dependent/Response variable
-    - $$\beta_0$$: Intercept
-    - $$\beta_1$$: Slope
-- Scatterplot: A picture of these data $$(x_i, y_i) $$.
-- If the two variables are not deterministically related: $$Y = \beta_0 + \beta_1 X + \epsilon $$
-    - $$\epsilon$$: Uncertainty
+- $Y = \beta_0 + \beta_1 X$
+    - $X$: Independent/Predictor/Explanatory variable
+    - $Y$: Dependent/Response variable
+    - $\beta_0$: Intercept
+    - $\beta_1$: Slope
+- Scatterplot: A picture of these data $(x_i, y_i) $.
+- If the two variables are not deterministically related: $Y = \beta_0 + \beta_1 X + \epsilon $
+    - $\epsilon$: Uncertainty
 - Relationship
     - Linear
     - Positive
