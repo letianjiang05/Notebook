@@ -1,5 +1,5 @@
 - **Statistical Inference**: 
-- **Hypothesis Testing**: a 
+- **Hypothesis Testing**
 
 # 1.1 Populations, Samples, and Processes
 - Data
@@ -45,12 +45,28 @@
 |Variance|$ \sigma^2 $|$ S^2 $|
 |Standard Deviation|$ \sigma $|$ S $|
 |Proportion|$ p $|$ \hat{P} $|
+||Target, Unknown, Constant (One Single Value)|Known, Random Variable (a list of possible values with associated probabilities), Use Statistic to infer Parameter|
 
-- Parameter
-    - Target
-    - Unknown
-    - Constant - One single value
-- Statistic
-    - Known
-    - Random Variable - a list of possible values with associated probabilities
-    - Use Statistic to infer Parameter
+- **Point Estimation of $θ$**: A single value estimate of a population parameter.
+    - Unbiased Estimator: $ E(\hat{θ}) = θ $
+    - Biased Estimator: $ \text{Bias}(\hat{θ}) = E(\hat{θ}) - θ $
+    - Minimum Variance Unbiased Estimator (MVUE)
+- If $X \sim N(\mu, \sigma^2)$
+    - Estimator: $\bar{\mu} = \overline{X}$ is the MVUE of $\mu$.
+- Standard Error/Standard Deviation: $\sigma_{\hat{\theta}} = \sqrt{\text{Var}(\hat{\theta})}$
+    - Estimator of Standard Error: $ s_{\hat{\theta}} = \hat{\sigma}_{\hat{\theta}}$
+
+# 7.1 Basic Principles of Confidence Intervals
+- Parameter of interest: $\mu$
+- $X \sim N(\mu, \sigma^2)$
+- $\sigma$ is known
+- Then:
+    - $E(\overline{X}) = \mu$
+    - $Var(\overline{X}) = \frac{\sigma^2}{n}$
+    - $\overline{X} \sim N(\mu, \frac{\sigma^2}{n})$
+    - $P\left(\overline{X} - 1.96 \frac{\sigma}{\sqrt{n}} < \mu < \overline{X} + 1.96 \frac{\sigma}{\sqrt{n}}\right) = 0.95$
+        - $95\%$ CI for $\mu = \left( \overline{X} - 1.96 \frac{\sigma}{\sqrt{n}}, \overline{X} + 1.96 \frac{\sigma}{\sqrt{n}} \right) $
+            - We are $95\%$ confident that the population mean lies within this interval.
+# 7.2 Large Sample Confidence Intervals for a Population Mean and Proportion
+- If $n$ is large enough
+    - $\overline{X} \sim N(\mu, \frac{\sigma^2}{n})$

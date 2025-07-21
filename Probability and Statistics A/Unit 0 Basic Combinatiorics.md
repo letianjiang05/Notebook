@@ -14,5 +14,3 @@ $
 
 # 1.4 Combinations
 Choose 3 from 10: $ \binom{10}{3} = \frac{10!}{3! \times (10-3)!} = \frac{10!}{3! \times 7!} $
-
-We define

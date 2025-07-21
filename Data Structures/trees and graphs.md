@@ -1,23 +1,28 @@
 # Trees
-- Trees are structures used to represent hierarchical relationship
 - A tree
     - nodes
-        - Root
-        - Leaves
-        - Internal nodes
-        - Parent
-        - Child
-        - Sibling: Same parent
-        - Ancestor: Parent or parent's parent
-        - Descendant: Child or child's child
-    - edges
-        - (u, v)
-    - Subtree
-    - Level: Distance from root
-    - Height: Layers
-- Binary tree: Each node has at most two children
-    - Left child
-    - Right child
+    - edges (u, v)
+
+```mermaid
+graph TD
+    A[Root] --> B[Internal nodes]
+    A --> C[Leaves]
+    B --> D[Parent]
+    D --> E[Child]
+    D --> F[Sibling]
+    D --> I[Sibling]
+    A --> G[Ancestor]
+    G --> H[Descendant]
+```
+- Level: Level 1, Level 2
+- Height: Height = 2
+## Binary Tree
+```mermaid
+graph TD
+    A[Root] --> B[left child]
+    A --> C[right child]
+```
+- Each node has at most two children
     - $ n \leq 2^h - 1 $
     - $ h \geq \log_2(n + 1) $
 - Full binary tree: Every node has either 0 or 2 children
@@ -39,26 +44,26 @@ graph TD;
     C --> F[LCC2]
     C --> G[RCC2]
 ```
-- Tree Traversal
-    - Pre-order (prefix)
-        - $ R \rightarrow LC \rightarrow LCC1 \rightarrow RCC1 \rightarrow RC \rightarrow LCC2 \rightarrow RCC2 $
-        - visit node
-        - recursively visit left subtree
-        - recursively visit right subtree
-    - In-order (infix)
-        - $ LCC1 \rightarrow LC \rightarrow RCC1 \rightarrow R \rightarrow LCC2 \rightarrow RC \rightarrow RCC2 $
-        - recursively visit left subtree
-        - visit node
-        - recursively visit right subtree
-    - Post-order (postfix)
-        - Can be computed efficiently using stack
-        - $ LCC1 \rightarrow RCC1 \rightarrow LC \rightarrow LCC2 \rightarrow RCC2 \rightarrow RC \rightarrow R $
-        - recursively visit left subtree
-        - recursively visit right subtree
-        - visit node
-    - Level-order
-        - $ R \rightarrow LC \rightarrow RC \rightarrow LCC1 \rightarrow RCC1 \rightarrow LCC2 \rightarrow RCC2 $
-        - Traverse the nodes level by level
+## Tree Traversal
+- Pre-order (prefix)
+    - $ R \rightarrow LC \rightarrow LCC1 \rightarrow RCC1 \rightarrow RC \rightarrow LCC2 \rightarrow RCC2 $
+    - visit node
+    - recursively visit left subtree
+    - recursively visit right subtree
+- In-order (infix)
+    - $ LCC1 \rightarrow LC \rightarrow RCC1 \rightarrow R \rightarrow LCC2 \rightarrow RC \rightarrow RCC2 $
+    - recursively visit left subtree
+    - visit node
+    - recursively visit right subtree
+- Post-order (postfix)
+    - Can be computed efficiently using stack
+    - $ LCC1 \rightarrow RCC1 \rightarrow LC \rightarrow LCC2 \rightarrow RCC2 \rightarrow RC \rightarrow R $
+    - recursively visit left subtree
+    - recursively visit right subtree
+    - visit node
+- Level-order
+    - $ R \rightarrow LC \rightarrow RC \rightarrow LCC1 \rightarrow RCC1 \rightarrow LCC2 \rightarrow RCC2 $
+    - Traverse the nodes level by level
 
 ||Pre-order|In-order|Post-order|Level-order|
 |---|---|---|---|---|
