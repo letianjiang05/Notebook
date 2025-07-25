@@ -1,18 +1,30 @@
-- Switching characteristics of semiconductor devices, TTL gate, CMOS gate.
+# Summary
+- Switching characteristics of TTL and CMOS
+- Latch
+    - SR latch (active LOW and active HIGH)
+    - Gated SR latch
+    - D latch
+    - Gated D latch
 - Flip-flop
+    - D flip-flop
+    - JK flip-flop
+    - T flip-flop
+- Timing
+    - Propagation Delay
+    - Setup time
+    - Hold time
+- FF Applications
 
 # Logic Levels
-The voltages used to represent logic 0 or 1 are called logic levels. 
-- HIGH can be any voltage between a specified minimum and a specified maximum.
-- LOW can be any voltage between a specified minimum and a specified maximum.
-- No overlap between the accepted range of HIGH levels and the accepted range of LOW levels.
-![alt text](image-5.png)
+- **logic levels**: The voltages used to represent logic 0 or 1
+    - HIGH: $[V_{H(min)}, V_{H(max)}]$
+    - Unacceptable: $[V_{H(max)}, V_{L(min)}]$
+    - LOW: $[V_{L(min)}, V_{L(max)}]$
+    - No overlap between the accepted range of HIGH levels and the accepted range of LOW levels.
 
 # Logic Families
 ## Bipolar IC Elements and Operations
-
 The main elements of a bipolar IC are resistors, diodes (which are also capacitors) and transistors. Basically, there are two types of operations in bipolar ICs:
-
 1. Saturated, and
 2. Non-saturated.
 
@@ -33,11 +45,11 @@ The MOS logic families are:
 2. Direct–coupled transistor logic (DCTL),
 3. Integrated–injection logic (I²L),
 4. Diode–transistor logic (DTL),
-5. High–threshold logic (HTL), and
-6. Transistor–transistor logic (TTL).
+5. High–threshold logic (HTL)
+6. Transistor–transistor logic (TTL)
 
 ## Non-Saturated Bipolar Logic Families
-1. Schottky TTL, and
+1. Schottky TTL
 2. Emitter-coupled logic (ECL).
 
 ## Characteristics of Digital ICs
@@ -45,29 +57,20 @@ The MOS logic families are:
 The various characteristics of digital ICs used to compare their performances are:
 
 1. Speed of operation
-    - $ t_{pHL} $: output HIGH to LOW propagation delay time,
-    - $ t_{pLH} $: output LOW to HIGH propagation delay time,
-2. Power dissipation,
-    - $ V_{CC} $: supply voltage,
-    - $ I_{CC} = \frac{I_{0} + I_{B}}{2} $: supply current,
-    - $ P_{D} = V_{CC} \cdot I_{CC} $: power dissipation,
+2. Power dissipation
 3. Figure of merit
-    - $ Figure \ of \ Merit = \frac{P_{D}}{t_{pHL} + t_{pLH}} $
 4. Fan-out
-5. Current and voltage parameters,
+5. Current and voltage parameters
 6. Noise immunity,
 7. Operating temperature range,
-8. Power supply requirements, and
+8. Power supply requirements
 9. Flexibilities available.
 
-![alt text](image-8.png)
-![alt text](image-7.png)
-
-Switching characteristics of semiconductor devices:
+# Switching characteristics of semiconductor devices
 - Digital waveforms consist of voltage levels that are changing back and forth between the HIGH and LOW levels.
 - **Rising edge** (or positive edge) happens when digital signal goes from LOW to HIGH.
 - **Falling edge** (or negative edge) happens when digital signal goes from HIGH to LOW.
-# Timing Diagram
+## Timing Diagram
 A timing diagram is a graph of digital waveforms showing the actual time relationship of two or more waveforms and how each waveform changes in relation to the others.
 
 # Sequential Logic Circuits
@@ -87,56 +90,59 @@ graph LR
 ## Bistable Elements
 - Has two stable conditions (states).
 - Can be used to store binary logic.
--  Q = high
-    - feedback to inverter 2 will cause its output to be low
-    - which also forces the output of inverter 1 to be high. 
-- If Q = low
-    - feedback to inverter 2 will cause its output to be high
-    - which also forces the output of inverter 1 to be low. 
 
-# Latches and Flip-flops
+||$Q = HIGH$|$Q = LOW$|
+|---|---|---|
+|feedback to inverter 2 will cause its output to be|Low|High|
+|forces the output of inverter 1 to be|High|Low|
+# Latch and Flip-Flop
+||Latch|Flip-Flop|
+|---|---|---|
+|Clock|No clock input|Has clock input|
+|can be in one or more stable states (bistable) and have one or more inputs that can be used to change the outputs|Yes|Yes|
+|Trigger|(Controlled latch) Level-triggered|Edge-triggered|
+# Latch
 - Sequential circuits have outputs that depend on both the **present state** and the **sequence of past inputs**. To be able to remember past inputs, sequential circuits contain memory devices called **latches** and **flip-flops**.
-- Both latches and flip-flops can be in one or more stable states (bistable) and have one or more inputs that can be used to change the outputs. 
-- **Flip-flops** have **clock** inputs
--  **latches** have **no clock** inputs.
-    - A latch is a type of bistable logic device.
-    - Can reside in either one of its two states, SET or RESET.
-    - SET: Q = 1
-    - RESET: Q = 0
 
+- A latch is a type of bistable logic device.
+- Can reside in either one of its two states, SET or RESET.
+- SET: $Q = 1$
+- RESET: $Q = 0$
+## Latch as level-sensitive device
+- Latch is a level-sensitive device, meaning the outputs change when the levels of the inputs change (LOW or HIGH).
+- Another device we will look at in the next slide is flip-flop which is an edge sensitive device.
+- An edge sensitive device means the outputs change at the edges of the triggering input called clock (CLK).
 ## SR Latch
 Latch as level-sensitive device
 -   Latch is a **level-sensitive device**, meaning the outputs change when the levels of the inputs change (LOW or HIGH).
-- Another device we will look at in the next slide is flip-flop which is an ****edge sensitive** device.
-- An ****edge sensitive** device means the outputs change at the edges of the triggering input called **clock (CLK)**.
+- Another device we will look at in the next slide is flip-flop which is an **edge sensitive** device.
+- An **edge sensitive** device means the outputs change at the edges of the triggering input called **clock (CLK)**.
 
 ### Active HIGH input SR (SET-RESET) latch
-Formed with two cross-coupled NOR gates.
+2 cross-coupled NOR gates.
 
 |S|R|Q||
 |---|---|---|---|
-|0|0|$Q_0$|No Change|
-|0|1|0|Reset|
-|1|0|1|Set|
-|1|1|$Q = Q' = 0$|Invalid|
+|$0$|$0$|$Q_0$|No Change|
+|$0$|$1$|$0$|Reset|
+|$1$|$0$|$1$|Set|
+|$1$|$1$|$Q = Q' = 0$|Invalid|
 
 ### Active LOW input S’R’ latch
-Formed with two cross-coupled NAND gates.
-
+2 cross-coupled NAND gates.
 
 |S’|R’|Q||
 |---|---|---|---|
-|0|0|1|Invalid|
-|0|1|1|Set|
-|1|0|0|Reset|
-|1|1|0|Invalid|
+|$0$|$0$|$Q = Q' = 1$|Invalid|
+|$0$|$1$|$1$|Set|
+|$1$|$0$|$0$|Reset|
+|$1$|$1$|$Q_0$|No Change|
 
 ### Gated SR Latch
 - A gated latch requires and enable input EN for enable (G is also used to designate an enable input).
     - When EN is HIGH
         - the S and R inputs control the state of the latch just as discussed in previous slides.
         - functions normally as an SR latch
-        
     - When EN is LOW
         - no change occurs.
         - the output Q does not change (the latch stores its previous output).
@@ -152,16 +158,12 @@ Timing Diagram of a gated SR latch
     - the output has no change.
 
 # Flip-Flops
-- **Controlled latches** are level-triggered. 
-- **Flip-flops** are edge-triggered devices.
-    - Positive Edge-triggered
-    - Negative Edge-triggered: Has a not gate (bubble) at the clock input.
+- Negative Edge-triggered: Has a not gate (bubble) at the clock input.
 - A **flip-flop** is a bistable (two stable states) logic circuit that can store only one bit at a time, either a 1 or a 0.
 - The output of a flip-flop indicates which bit it is storing.
 - An **edge-triggered flip-flop** changes state either at the positive edge (rising edge) or at the negative edge (falling edge) of the clock pulse and is sensitive to its inputs only at this transition of the clock.
 
-## Types of Flip-Flops
-### D Flip-Flop
+## D Flip-Flop
 - D is HIGH
     - Q output goes HIGH on the triggering edge of the clock pulse
     - flip-flop is SET
@@ -178,7 +180,7 @@ Positive Edge-triggered D Flip-Flop
 
 The operation of a negative edge-triggered D flip-flop are the same as those of the positive edge-triggered device except that the falling edge of the clock pulse is the triggering edge.
 
-### JK Flip-Flop
+## JK Flip-Flop
 - J is HIGH, K is LOW
     - the Q output goes HIGH on the triggering edge of the clock pulse
     - the flip-flop is SET.
@@ -201,7 +203,9 @@ The operation of a negative edge-triggered D flip-flop are the same as those of 
 | 1 | 1 | 0  | 1     | toggle     |
 | 1 | 1 | 1  | 0     | toggle     |
 
-$Q_{n+1} = J \overline{Q_n} + \overline{K} Q_n$ 
+- $Q_{n+1} = J \overline{Q_n} + \overline{K} Q_n$ 
+- $Q(t+1) = JQ’ + K’Q$
+
 ### T Flip-Flop (Toggle flip-flop)
 - T flip-flop can be built from JK flip-flop or D flip-flop as shown below.
 - Changes output state at every active clock edge if the input T = 1. 
@@ -253,5 +257,21 @@ $ Q_{n+1} = T ⊕ Q_n'$
 
 # Propagation Delay
 - The interval of time required after an input signal has been applied for the resulting output change to occur.
-1. Propagation delay $ t_{PLH} $ as measured from the triggering edge of clock pulse to the LOW-to-HIGH transition at the output. See figure (a) in the next slide.
-2. Propagation delay $ t_{PHL} $ as measured from the triggering edge of clock pulse to the HIGH-to-LOW  transition at the output. See figure (b) in the next slide.
+1. Propagation delay $ t_{PLH} $ as measured from the triggering edge of clock pulse to the LOW-to-HIGH transition at the output. 
+2. Propagation delay $ t_{PHL} $ as measured from the triggering edge of clock pulse to the HIGH-to-LOW  transition at the output. 
+- Setup time $ t_s $ is the minimum interval required for the logic levels to be maintained constantly on the inputs (J and K, or D) prior to the triggering edge of the clock pulse in order for the levels to be reliably clocked into the flip-flop.
+- Hold time $ t_h $ is the minimum interval required for the logic levels to remain on the inputs after the triggering edge of the clock pulse in order for the levels to be reliably clocked into the flip-flop.
+
+# FF Applications
+- Bounce elimination switch
+- Shift Register
+- Counters
+- Frequency Division
+- Memory circuits  etc.
+
+- SR Latch – Application as Switch Debouncer
+- Shift Register
+A register is a group of flipflops which can store a group of bits. Lets consider a 4 FF register. Each of the four parallel data lines is connected to the D input of a flip-flop. The clock inputs of the flip-flops are connected together, so that each flip-flop is triggered by the same clock pulse. In this example, positive edge-triggered flip-flops are used, so the data on the D inputs are stored simultaneously by the flip-flops on the positive edge of the clock, as indicated in the timing diagram. Also, the asynchronous reset (R) inputs are connected to a common CLR line, which initially resets all the flip-flops.
+- Counters
+Counters are the sequential circuits that can count the events. Electrical pulses corresponding to the event are produced using a transducer/sensors and these pulses are counted to keep track of the no. of events.
+Consider a 2-bit counter connected for asynchronous operation. Negative edge-triggered J-K flip-flops are used for illustration. Both flip-flops are initially RESET. Flip-flop A toggles on the negative-going transition of each clock pulse. The Q output of flip-flop A clocks flip-flop B, so each time QA makes a HIGH-to-LOW transition, flip-flop B toggles. The resulting QA and QB waveforms are shown in the figure. 

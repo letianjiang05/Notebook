@@ -1,15 +1,30 @@
-- Counters
-- Registers
+# Summary
+- Counter
+    - Asynchronous
+    - Synchronous
+    - Modulus of counter
+    - mod-x counter
+- Shift register
+    - Mode of operation
+    - Shift register counter
 # Sequential logic modules
-Sequential logic modules are circuits, in which **combinational logic elements are combined with latches and flip-flops** to realize several commonly-used functions. \
-Two main classes of these modules are **registers** and **counters**, which are the basic building blocks of a digital computer and other digital logic applications. \
-The shift registers are used for storing and manipulating binary data.\
-Shift registers can be combined with a binary adder to produce an accumulator.\
-The counters, which generate sequences of binary numbers, are used in timing units, control circuits, signal generators, and numerous other devices. 
+Sequential logic modules are circuits, in which **combinational logic elements are combined with latches and flip-flops** to realize several commonly-used functions. 
+Two main classes of these modules: **registers** and **counters**, which are the basic building blocks of a digital computer and other digital logic applications. 
+- The shift registers
+    - used for storing and manipulating binary data.
+    - Can be combined with a binary adder to produce an accumulator.
 
-# Sequential Circuits
-## Asynchronous sequential circuits:
-Outputs and states change as soon as an input changes.
+# Counter
+- The counters
+    - generate sequences of binary numbers.
+    - used in timing units, control circuits, signal generators, and numerous other devices. 
+- Counters are a class of sequential logic circuits that tally a series of input pulses; the pulses may be **regular** or **irregular** in nature. 
+- The basic building device for counters is the JK or T flip-flop that operates in **toggle mode**.
+
+## Asynchronous
+- Outputs and states change as soon as an input changes.
+
+
 
 ``` mermaid
 graph LR
@@ -20,9 +35,13 @@ graph LR
         style B fill:#ffff33,stroke:#ff0000,stroke-width:2px
     style D fill:#ffff33,stroke:#ff0000,stroke-width:2px
 ```
+### 2-bit asynchronous binary counter
+- Two positive-edge-triggered T flip-flops are connected in cascade configuration.
+Let $\tau$ be the inherent propagation delay time through one T flip-flop, and Q and Q’ change state simultaneously. (In fact tPLH  tPHL, and Q and Q’ do not change state simultaneously).
+Due to $\tau$, transitions of the CLK and transitions of the Q’ can never occur at exactly the same time. Therefore, the 2 flip-flops are never simultaneously triggered. So the counter is asynchronous.
 
-## Synchronous sequential circuits:
-Outputs and states change depending on a special input (clock).
+## Synchronous
+- Outputs and states change depending on a special input (clock).
 ``` mermaid
 flowchart LR
     A[Inputs] --> B[Combinational<br> Circuit]
@@ -34,13 +53,9 @@ flowchart LR
     style B fill:#ffff33,stroke:#ff0000,stroke-width:2px
     style D fill:#ffff33,stroke:#ff0000,stroke-width:2px
 ```
-## Counters
-Counters are a class of sequential logic circuits that tally a series of input pulses; the pulses may be **regular** or **irregular** in nature.\
-Counters may be categorized as **asynchronous/synchronous**. 
-The basic building device for counters is the **JK** or **T** flip-flop that operates in **toggle mode**.
 
-### Asynchronous counters
-Asynchronous refers to events that do not have a fixed time relationship with each other and, generally, do not occur at the same time. 
-Asynchronous counter is one in which the flip-flops within the counter do not change states at exactly the same time because they do not have a common clock pulse.
-
-#### A 2-bit asynchronous binary counter
+||Asynchronous|Synchronous|
+|---|---|---|
+|Refers to events that|Do not have a fixed time relationship with each other and, generally, do not occur at the same time. |have a fixed time relationship with each other. |
+|The flip-flops in the counter|do not change states at exactly the same time because they do not have a common clock pulse|are clocked at the same time by a common clock pulse|
+|Flip-flops||Only JK or clocked T flip-flop is used because hold and toggle modes are need for the counter operation.|

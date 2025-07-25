@@ -14,13 +14,15 @@
 - Marginal PDF
     - $f_X(x) = \int_{-\infty}^{\infty} f(x, y) \, dy$
     - $f_Y(y) = \int_{-\infty}^{\infty} f(x, y) \, dx$
+- $f_{X|Y}(x|y) = f_X(x)$
+- $f_{Y|X}(y|x) = f_Y(y)$
 
 # 6.2 Independent Random Variables
 - X and Y are independent if, for any 2 sets of real numbers A and B: $P(X \in A, Y \in B) = P(X \in A) P(Y \in B)$
 - If $ X $ and $ Y $ are independent
-    - Joint distribution function: $ F(x, y) = F_X(x) F_Y(y) $
-    - Discrete case: $p(x, y) = p_X(x) p_Y(y)$
-    - Continuous case: $f(x, y) = f_X(x) f_Y(y)$
+    - $ F(x, y) = F_X(x) F_Y(y) $
+    - $p(x, y) = p_X(x) p_Y(y)$
+    - $f(x, y) = f_X(x) f_Y(y)$
 
 # 6.3 Sums of Independent Random Variables
 - If $ X, Y $ are independent
@@ -30,7 +32,8 @@
 # 6.4 Conditional Distributions: Discrete Case
 - the conditional distribution of $ X $ given $ Y = y $
 - $ P_{X|Y}(x|y) = P(X = x | Y = y) = \frac{P(X = x, Y = y)}{P(Y = y)} = \frac{p(x, y)}{p_Y(y)} $
-
+- $P(X \in A, Y \in B) = \int_A \int_B f(x, y) \, dx \, dy$
+- $P(X < Y) = \int_{-\infty}^{\infty} \int_{-\infty}^{y} f(x, y) \, dx \, dy$
 # 6.5 Conditional Distributions: Continuous Case
 - the conditional distribution of $ X $ given $ Y = y $
 - $ f_{X|Y}(x|y) = \frac{f(x, y)}{f_Y(y)} $
