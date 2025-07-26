@@ -121,9 +121,7 @@ $ 010\ 110.010 = 26.2_{8} = 16.4_{16} $
 |$14$|$1110$|$1001$|
 |$15$|$1111$|$1000$|
 ### Binary Coded Decimal (BCD)
-- Binary coded decimal (BCD) is a way to express each of the decimal digits with a binary code. 
-- A number with k decimal digits will require 4k bits in BCD. 
-- Decimal 396 is represented in BCD with 12bits as 0011 1001 0110, with each group of 4 bits representing one decimal digit.
+- A way to express each of the decimal digits with a binary code. 
 - A decimal number in BCD is the same as its equivalent binary number only when the number is between 0 and 9. 
 - The binary combinations 1010 through 1111 are not used and have no meaning in BCD.
 #### Conversion
@@ -132,36 +130,31 @@ $ 24_{10} = 0010\ 0100_{BCD} $
 - BCD $\rightarrow$ Decimal
 $ 0111\ 0000_{BCD} = 70_{10} $
 ### Gray Code
-The Gray code has no specific weights assigned to the bit positions. \
-The important feature of the Gray code is that it exhibits only a single bit change from one code word to the next in the sequence.\
-Its primary use is:
-- Error detection.
-- Representation of analog data.
-- Low power design
+- The Gray code has no specific weights assigned to the bit positions. 
+- The important feature of the Gray code is that it exhibits only a single bit change from one code word to the next in the sequence.
+- Primary use
+  - Error detection
+  - Representation of analog data
+  - Low power design
 
-- Binary-to-Gray code conversion
-    1. The most significant bit MSB (left most) in the Gray code is the same as the corresponding MSB in the binary number.
-    2. Going from left to right, add each adjacent pair of binary code bits to get the next Gray code bit. Discard carries.\
-    $ 1 0 1 1 0 \rightarrow 1 1 1 0 1 $\
-    $ 1 \rightarrow 0 \rightarrow 1 \rightarrow 1 \rightarrow 0 $\
-    $ \downarrow  $\
-    $ 1 \rightarrow 1 \rightarrow 1 \rightarrow 0 \rightarrow 1 $
-- Gray-to-binary conversion
-    1. The most significant bit MSB (left most) in the binary number is the same as the corresponding MSB in the Gray code.
-    2. Going from left to right, add each binary code bit generated to the Gray code bit in the next adjacent position. Discard carries.\
-    $ 1 \rightarrow 1 \rightarrow 0 \rightarrow 1 \rightarrow 1 $\
-    $ \downarrow $\
-    $ 1 \rightarrow 0 \rightarrow 0 \rightarrow 1 \rightarrow 0 $
+#### Binary-to-Gray code conversion
+1. The most significant bit MSB (left most) in the Gray code is the same as the corresponding MSB in the binary number.
+2. Going from left to right, add each adjacent pair of binary code bits to get the next Gray code bit. Discard carries.
+![alt text](image-6.png)
+#### Gray-to-binary conversion
+1. The most significant bit MSB (left most) in the binary number is the same as the corresponding MSB in the Gray code.
+2. Going from left to right, add each binary code bit generated to the Gray code bit in the next adjacent position. Discard carries.
+![alt text](image-7.png)
 ## ASCII Character Codes
-American Standard Code for Information Interchange (Refer to Table 1.7)
-A popular code used to represent information sent as character-based data.
-It uses 7-bits to represent:
-94 Graphic printing characters.
-34 Non-printing characters.
-Some non-printing characters are used for text format (e.g. BS = Backspace, CR = carriage return).
-Other non-printing characters are used for record marking and flow control (e.g. STX and ETX start and end text areas).
+- American Standard Code for Information Interchange (Refer to Table 1.7)
+- A popular code used to represent information sent as character-based data.
+- It uses 7-bits to represent:
+  - 94 Graphic printing characters.
+  - 34 Non-printing characters.
+- Some non-printing characters are used for text format (e.g. BS = Backspace, CR = carriage return).
+- Other non-printing characters are used for record marking and flow control (e.g. STX and ETX start and end text areas).
 
-- EBCDIC Codes: Extended Binary Coded Decimal Interchange Code (EBCDIC)
+## EBCDIC Codes: Extended Binary Coded Decimal Interchange Code (EBCDIC)
 - Uni Code: Everyone in the world should be able to use their own language on phones and computers.
 It’s a 32/64 bit code which represent all the characters and emoji, visual representation etc.
 ## Logic circuit

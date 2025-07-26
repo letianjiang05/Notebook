@@ -245,18 +245,31 @@ graph LR
 - A hazard is the potential or actual malfunction of a logic network during transition between 2 input states as a result of a single variable change.
 ## Static Hazard
 A transient change of an output value that is supposed to remain fixed during the transition between two input states.
-### Static 1 Hazard
-- Initial
-    - Input state: $(A, B, C) = (1, 1, 1)$
-    - Output state: $Z = 1$
-- $B: 0 \rightarrow 1$
-- $Z: 1 \rightarrow 0 \rightarrow 1$
+### Static 1 Hazard and Static 0 Hazard
+- $x_2$ change from $0/1$ to $1/0$, and the NOT gate change after a little time, the output $1 \rightarrow 0 \rightarrow 1$/$0 \rightarrow 1 \rightarrow 0$.
 ![alt text](image-4.png)
-### Static 0 Hazard
-- Initial
-    - Input state: $(A, B, C) = (0, 0, 0)$
 ![alt text](image-3.png)
 ## Dynamic Hazard
-- Dynamic hazards are momentary false outputs when a network is to change between 2 logic states. The picture below shows a dynamic hazard.
-
+- Dynamic hazards are momentary false outputs when a network is to change between 2 logic states.
+![alt text](image-5.png)
 ## Elimination of hazard using K-maps
+### Static 1 
+- Hazards can be detected using K-maps.
+- To detect static 1 hazard in a two level AND-OR circuit:
+    1. Write down the SOP expression for the circuit
+    2. Plot the minterms on K-map and loop them
+    3. If any two adjacent 1’s are not looped, a static 1 hazard exists
+    4. To remove the hazard, loop the two 1’s.
+### Static 0
+- Note that static 0 hazard occur primarily in OR-AND logic circuits that implement POS expression.
+- Static 0 hazard can be detected and eliminated using K-map:
+- To detect static 0 hazard in a two level OR-AND circuit:
+    1. Write down the POS expression for the circuit
+    2. Plot the maxterms on K-map and loop them
+    3. If any two adjacent 0’s are not looped, a static 0 hazard exists.
+    4. To remove the hazard, loop the two 0’s.
+### Static & Dynamic Hazard Elimination
+- When using K-maps to design a combinational AND-OR circuit, we can eliminate static-1 hazards by circling all adjacent 1 terms.
+- When using K-maps to design a combinational OR-AND circuit, we can eliminate static-0 hazards by circling all adjacent 0 terms.
+- In general, to get rid of hazards, just loop all prime implicants.
+- If we eliminate all static 0 and static 1 hazards, dynamic hazards will not occur.
