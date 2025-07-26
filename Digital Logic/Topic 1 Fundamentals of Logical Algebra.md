@@ -1,5 +1,5 @@
 # Summary
-- Numbering systems
+- Numbering systems  
   - Decimal, Binary, Hexadecimal, Octal
   - Conversion, Arithmetic operations
 - Binary Code
@@ -197,10 +197,10 @@ It’s a 32/64 bit code which represent all the characters and emoji, visual rep
 - $(A + B)(A + C) = A + B C$
 
 ## DeMorgan's Theorems
-- $ \overline{A + B} = \overline{A} \cdot \overline{B} $
-- $ \overline{A \cdot B} = \overline{A} + \overline{B} $
-- $ \overline{A + B + C} = \overline{A} \cdot \overline{B} \cdot \overline{C} $
-- $ \overline{A \cdot B \cdot C} = \overline{A} + \overline{B} + \overline{C} $
+- $\overline{A + B} = \overline{A} \cdot \overline{B}$
+- $\overline{A \cdot B} = \overline{A} + \overline{B}$
+- $\overline{A + B + C} = \overline{A} \cdot \overline{B} \cdot \overline{C}$
+- $\overline{A \cdot B \cdot C} = \overline{A} + \overline{B} + \overline{C}$
 ## Variable, Literal, Complement
 - Variable: a symbol used to represent a condition with value of either 0 or 1. 
   - In Boolean equation Y = AB + CD. Each symbol Y, A, B, C and D is a variable.
@@ -208,7 +208,7 @@ It’s a 32/64 bit code which represent all the characters and emoji, visual rep
   - $A'$, $\overline{A}$
 - Literal: a variable or a complement of a variable. 
   - A is a literal, and $ \overline{A} $ is also a literal.
-- Boolean equation: $ Z = A(B + CD) $
+- Boolean equation: $Z = A(B + CD)$
 - Truth table
 # Minterm, maxterm
 ## sum of product (SOP)
@@ -271,4 +271,19 @@ A function with n variables is in canonical form if the SOP or POS expression ha
 |$1$|$0$|$1$|$m_5$|$XY'Z$|$M_5$|$X' + Y + Z'$|
 |$1$|$1$|$0$|$m_6$|$XYZ'$|$M_6$|$X' + Y' + Z$|
 |$1$|$1$|$1$|$m_7$|$XYZ$|$M_7$|$X' + Y' + Z'$|
+
+# K-maps
+|ab\c|$0$|$1$|
+|---|---|---|
+|$00$|0|1|
+|$01$|2|3|
+|$10$|4|5|
+|$11$|6|7|
+
+|ab\cd|$00$|$01$|$11$|$10$|
+|---|---|---|---|---|
+|$00$|1|2|4|3|
+|$01$|5|6|8|7|
+|$11$|13|14|16|15|
+|$10$|9|10|12|11|
 
