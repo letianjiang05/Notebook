@@ -73,8 +73,8 @@ $10A4_{16} = 0001\ 0000\ 1010\ 0100_{2}$
 ## 8 to 2
 |Octal|Binary|
 |------|-------|
-|0     |000    |
-|7     |111    |
+|$0$|$000$|
+|$7$|$111$|
 |$140_{8}$|$001\ 100\ 000_{2}$|
 
 ### 2 to 8
@@ -205,10 +205,10 @@ It’s a 32/64 bit code which represent all the characters and emoji, visual rep
 - Truth table
 # Minterm, maxterm
 ## sum of product (SOP)
-- $Z = A ( B + CD)$
 - $Z = A B’ C D + A B C’ D’ + A B C’ D + A B C D’+ A B C D$
 - $AB’CD$ is a product term.
-
+- $f_1(A,B,C,D) = m_0 + m_2 + m_3 + m_5 + m_7 = \sum m(0, 2, 3, 5, 7)$
+- $A$ is MSB, $D$ is LSB.
 ### Simply Boolean equations:
 - $[AB’(C + BD) + A’B’]C = A’BC + AB’C’ + A’B’C’ + AB’C + ABC$
 
@@ -217,6 +217,7 @@ It’s a 32/64 bit code which represent all the characters and emoji, visual rep
 - $ABC$ is not a standard SOP expression because D is missing.
 ## The Product of Sum (POS)
 $(A + B + C)’$ is not a POS because in a POS a single overbar cannot extend over more than one variable.
+- $f_1 = M_4 \cdot M_5 \cdot M_6 = \Pi M(4, 5, 6)$
 ### The Standard POS
 Same as SOP
 ### SOP and POS
@@ -280,3 +281,56 @@ A function with n variables is in canonical form if the SOP or POS expression ha
 |$11$|13|14|16|15|
 |$10$|9|10|12|11|
 
+## Don’t care conditions
+- A function may be incompletely specified. This function has don’t care terms.
+- Don’t care arises when:
+  - The function has certain input combinations that can never occur. If that is the case, we don’t care what the output is for those inputs.
+  - All input combinations of a function occur but we don’t care whether the output is 1 or 0 for certain input combinations.
+- Don’t care terms are included in logic design (assign a 1 to it) if they help to simplify the logic circuit or otherwise omitted (assign a 0 to it).
+- For example, the truth table below shows an incompletely specified function. Don’t care is represented by ‘$X$’.
+- $F(A,B,C) = \sum m(0,3,7) + \sum d(1,6)$
+- $F(A,B,C) = ∏M(2,4,5)· ∏ D(1,6)$
+- We can assign 0 or 1 to the don’t care output, $X$ and still obtain the required outputs.
+
+# Implementation of logic functions
+- AND/OR/NOT gates are sufficient for building any Boolean functions.
+- However, other gates are also used because:
+    1. usefulness
+    2. economical on transistors
+    3. self-sufficient
+- NAND/NOR: economical, self-sufficient
+- XOR: useful (e.g. parity bit generation)
+## NAND gate
+- NAND gate is **self-sufficient** (can build any logic circuit with it).
+- Can be used to implement AND/OR/NOT.
+### Implementing an inverter using NAND gate
+$(x.x)' = x'$
+![alt text](image-8.png)
+### Implementing AND using NAND gates
+$[(x.y)'.(x.y)']' = ([x' + y']')' = x.y$
+![alt text](image-9.png)
+### Implementing OR using NAND gates
+$[(x + x)'.(y + y)']' = (x'y')' = x + y$
+![alt text](image-14.png)
+## NOR Gate
+- NOR gate is also self-sufficient.
+- Can be used to implement AND/OR/NOT.
+### Implementing an inverter using NOR gate
+$(x + x)' = x'$
+![alt text](image-11.png)
+### Implementing AND using NOR gates
+$[(x.x)'+(y.y)']' = (x' + y')' = x.y$
+![alt text](image-12.png)
+
+### Implementing OR using NOR gates
+$[(x + y)'+(x + y)']' = ((x + y)')' = x + y$
+![alt text](image-13.png)
+
+### Example
+- $F = xy' + x'z$
+#### NAND
+$F = [(xy')'.(x'z)']'$
+![alt text](image-15.png)
+#### NOR
+$F = (((x’+y)’ + (x+z’)’)’+ ((x’+y)’ + (x+z’)’)’)’$
+![alt text](image-16.png)

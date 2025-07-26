@@ -37,8 +37,14 @@ graph LR
 ```
 ### 2-bit asynchronous binary counter
 - Two positive-edge-triggered T flip-flops are connected in cascade configuration.
-Let $\tau$ be the inherent propagation delay time through one T flip-flop, and Q and Q’ change state simultaneously. (In fact tPLH  tPHL, and Q and Q’ do not change state simultaneously).
-Due to $\tau$, transitions of the CLK and transitions of the Q’ can never occur at exactly the same time. Therefore, the 2 flip-flops are never simultaneously triggered. So the counter is asynchronous.
+- $\tau$: inherent propagation delay time through one T flip-flop, and Q and Q’ change state simultaneously. (In fact $t_{PLH} \neq t_{PHL}$, and $Q$ and $Q'$ do not change state simultaneously).
+- Due to $\tau$, transitions of the CLK and transitions of the $Q'$ can never occur at exactly the same time. Therefore, the 2 flip-flops are never simultaneously triggered. So the counter is asynchronous.
+
+- Total delay time (called cumulative delay) from CLK to Q1 is $2\tau$.
+- Total number of different states (00, 01,10,11) of the counter is 4.
+- The period of Q0 waveform is 2T and of Q1 waveform is 4T, where T is the period of clock signal. 
+- If Q0 is the LSB (least significant bit) and Q1 is the MSB (most significant bit), the sequence of the counter states represents a sequence of binary numbers. Hence, it is a binary counter. It counts the number of clock pulses up to 310 (112) and on the 4th pulse it recycles to its original state (002). 
+- Recycle refers to the transition of the counter from its final state back to its original state. 
 
 ## Synchronous
 - Outputs and states change depending on a special input (clock).
